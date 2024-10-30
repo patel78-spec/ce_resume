@@ -1,2 +1,2 @@
 # ce_resume
-This is my resume
+This is the AWS cloud resume challenge
