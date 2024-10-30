@@ -6,4 +6,4 @@ async function updateCounter() {
     let data = await response.json();
     counter.innerHTML = ` ${data} people have visited this page`;
 }
-updateCounter();
+await updateCounter();
