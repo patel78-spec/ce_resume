@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             let data = await response.json();
             console.log(data);
 
-            counter.innerHTML = `${data.count} people have visited this page`;
+            counter.innerHTML = `${data} people have visited this page`;
         } catch (error) {
             console.error("Failed to update counter:", error);
             counter.innerHTML = "Unable to load visitor count.";
