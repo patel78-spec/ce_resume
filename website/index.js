@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     async function updateCounter() {
         try {
             let response = await fetch(
-                "https://t5shendiegekxn4lpxvnjade6i0whllr.lambda-url.us-east-1.on.aws/"
+                "https://4ktzqn5mhxebbwrd454qpogcaa0jhbei.lambda-url.us-east-1.on.aws/"
             );
 
             if (!response.ok) {
@@ -24,13 +24,3 @@ document.addEventListener("DOMContentLoaded", async () => {
     updateCounter();
 });
 
-async function updateCounter() {
-    let response = await fetch(
-        "https://t5shendiegekxn4lpxvnjade6i0whllr.lambda-url.us-east-1.on.aws/"
-    );
-    console.log(response)
-    console.log('...............................')
-    let data = await response.json();
-    console.log(data)
-    counter.innerHTML = ` ${data} people have visited this page`;
-}
