@@ -48,9 +48,11 @@ resource "aws_iam_policy" "iam_policy_for_resume_project" {
           "Effect" : "Allow",
           "Action" : [
             "dynamodb:UpdateItem",
-			      "dynamodb:GetItem"
+			      "dynamodb:GetItem",
+            "dynamodb:PutItem",
+            "dynamodb:UpdateTable"            
           ],
-          "Resource" : "arn:aws:dynamodb:*:*:table/cloud-resume-test"
+          "Resource" : "arn:aws:dynamodb:us-east-1:781014416157:table/cloud-resume-test"
         },
       ]
   })
