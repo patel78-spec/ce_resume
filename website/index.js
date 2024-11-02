@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const counter = document.getElementById("counter");
-
+    // updating the counter function
     async function updateCounter() {
         try {
             let response = await fetch(
