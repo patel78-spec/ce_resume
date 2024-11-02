@@ -62,7 +62,7 @@ data "github_repository" "main" {
 resource "github_actions_secret" "AWS_S3_BUCKET" {
   repository      = data.github_repository.main.name
   secret_name     = "AWS_S3_BUCKET"
-  plaintext_value = aws_s3_bucket.web_bucket.arn
+  plaintext_value = "arn:aws:s3:::my-cloud-resume-bucket-01-11-2024"
 }
 
 
@@ -222,10 +222,6 @@ resource "aws_lambda_function_url" "url1" {
   }
 }
 
-# CloudFront Invalidation
-resource "aws_cloudfront_distribution_invalidation" "example_invalidation" {
-  distribution_id = aws_cloudfront_distribution.s3_distribution.id
-  paths           = ["/*"] # Invalidate all paths, or specify individual paths
-}
+
 
 
