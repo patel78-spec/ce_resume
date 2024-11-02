@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "web_bucket" {
   }
 }
 
-
+#etc
 
 # Loop through each file and upload it to S3
 resource "aws_s3_object" "upload_website_files" {
