@@ -65,14 +65,24 @@ async function updateCounter() {
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        let counter = getElmentById('counter')
+
+        let counter = document.getElementById('counter'); // Corrected typo here
+        if (!counter) {
+            console.error("Counter element not found in the document.");
+            return;
+        }
+
         let data = await response.json();
         console.log(data);
 
         counter.innerHTML = `👀 Views: ${data}`;
     } catch (error) {
         console.error("Failed to update counter:", error);
-        counter.innerHTML = "Unable to load visitor count.";
+
+        let counter = document.getElementById('counter'); // Check counter existence again
+        if (counter) {
+            counter.innerHTML = "Unable to load visitor count.";
+        }
     }
 }
 updateCounter();
