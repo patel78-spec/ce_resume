@@ -1,6 +1,7 @@
 name: front-end
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'website/**'  # This triggers the workflow only if changes are made in /infra or its subdirectories

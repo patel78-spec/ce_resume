@@ -1,6 +1,7 @@
 name: Run Workflow on infra Changes
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'infra/**'  # This triggers the workflow only if changes are made in /infra or its subdirectories
