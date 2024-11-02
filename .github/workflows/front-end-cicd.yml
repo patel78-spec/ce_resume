@@ -1,13 +1,14 @@
-name: Upload Website
+name: front-end
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-    - main
+  workflow_run:
+    workflows: ["Back-End"]
+    types:
+      - completed
 
 jobs:
-  deploy:
+  deploy-Website:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
