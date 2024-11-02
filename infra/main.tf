@@ -182,7 +182,7 @@ resource "aws_iam_policy" "iam_policy_for_resume_project" {
             "logs:CreateLogStream",
             "logs:PutLogEvents"
           ],
-          "Resource" : "arn:aws:logs:*:*:*",
+          "Resource" : "arn:aws:logs:*:*:*:*:*",
           "Effect" : "Allow"
         },
         {
@@ -218,7 +218,7 @@ resource "aws_lambda_function_url" "url1" {
     allow_methods     = ["*"]
     allow_headers     = ["date", "keep-alive"]
     expose_headers    = ["keep-alive", "date"]
-    max_age           = 86400
+    max_age           = 10
   }
 }
 
