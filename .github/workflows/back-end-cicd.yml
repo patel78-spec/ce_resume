@@ -49,6 +49,8 @@ jobs:
       - name: Terraform Plan
         id: plan
         run: terraform plan -out=tfplan
+        env:
+          TF_VAR_alternate_domain: ${{ secrets.TF_VAR_alternate_domain }}
 
       - name: Terraform Plan Summary
         if: always()
@@ -57,3 +59,5 @@ jobs:
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve tfplan
+        env:
+          TF_VAR_alternate_domain: ${{ secrets.TF_VAR_alternate_domain }}
