@@ -222,4 +222,10 @@ resource "aws_lambda_function_url" "url1" {
   }
 }
 
+# CloudFront Invalidation
+resource "aws_cloudfront_distribution_invalidation" "example_invalidation" {
+  distribution_id = aws_cloudfront_distribution.s3_distribution.id
+  paths           = ["/*"]  # Invalidate all paths, or specify individual paths
+}
+
 
