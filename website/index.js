@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     async function updateCounter() {
         try {
             let response = await fetch(
-                "https://4ktzqn5mhxebbwrd454qpogcaa0jhbei.lambda-url.us-east-1.on.aws/"
+                "https://xk3fq3hbnrbbvue6mfzeozjv5y0sxbrz.lambda-url.us-east-1.on.aws/"
             );
 
             if (!response.ok) {

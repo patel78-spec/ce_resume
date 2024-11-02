@@ -60,7 +60,7 @@ data "github_repository" "main" {
 }
 
 resource "github_actions_secret" "AWS_S3_BUCKET" {
-  repository      = data.github_repository.main.id
+  repository      = data.github_repository.main.name
   secret_name     = "AWS_S3_BUCKET"
   plaintext_value = aws_s3_bucket.web_bucket.arn
 }
