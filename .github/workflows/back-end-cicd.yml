@@ -15,12 +15,16 @@ jobs:
   terraform:
     name: Terraform Workflow
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./infra
 
     permissions:
       id-token: write
       contents: read
 
     steps:
+      
       - name: Checkout repository
         uses: actions/checkout@v3
 
