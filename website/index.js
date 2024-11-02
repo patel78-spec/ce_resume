@@ -65,7 +65,7 @@ async function updateCounter() {
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-
+        let counter = getElmentById('counter')
         let data = await response.json();
         console.log(data);
 
