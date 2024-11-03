@@ -176,11 +176,16 @@ body{
   .dev-icons {
     font-size: 5rem;
     align-items: center;
+    transition: 0.3s;
   }
   
 
   .dev-icons .list-inline-item :hover {
     color: var(--color-blue);
+  }
+
+  .dev-icons .list-inline-item :hover i {
+    transform: scale(1.3);
   }
   /*icons*/
 
