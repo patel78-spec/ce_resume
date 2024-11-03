@@ -67,7 +67,8 @@ async function updateCounter() {
         }
 
         let counter = document.getElementById('counter'); // Corrected typo here
-        if (!counter) {
+        let views = document.getElementById('counter-views');
+        if (!counter && !views){ 
             console.error("Counter element not found in the document.");
             return;
         }
@@ -76,11 +77,15 @@ async function updateCounter() {
         console.log(data);
 
         counter.innerHTML = `👀 Views: ${data}`;
+        views.innerHTML = `👀 Views: ${data}`;
+
+        
     } catch (error) {
         console.error("Failed to update counter:", error);
 
         let counter = document.getElementById('counter'); // Check counter existence again
-        if (counter) {
+        let views = document.getElementById('counter-views');
+        if (counter && views) {
             counter.innerHTML = "Unable to load visitor count.";
         }
     }
