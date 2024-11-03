@@ -150,13 +150,14 @@ body{
 .social-icons a{
     display:inline-block;height:3.5rem;
     width:3.5rem;
-    background-color: #fff;
+    background-color: transparent;
     color:#343a40!important;
     border-radius:100%;
     text-align:center;
     font-size:1.5rem;
     line-height:3.5rem;
-    margin-right:1rem
+    margin-right:1rem;
+    transition: 0.3s;
   }
   
   .social-icons a:last-child{
