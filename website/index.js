@@ -66,9 +66,9 @@ async function updateCounter() {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        let counter = document.getElementById('counter'); // Corrected typo here
-        let views = document.getElementById('counter-views');
-        if (!counter && !views){ 
+        let counter = document.getElementById('counter-views'); // Corrected typo here
+        // let views = document.getElementById('counter-views')
+        if (!counter) {
             console.error("Counter element not found in the document.");
             return;
         }
@@ -77,15 +77,13 @@ async function updateCounter() {
         console.log(data);
 
         counter.innerHTML = `👀 Views: ${data}`;
-        views.innerHTML = `👀 Views: ${data}`;
 
         
     } catch (error) {
         console.error("Failed to update counter:", error);
 
         let counter = document.getElementById('counter'); // Check counter existence again
-        let views = document.getElementById('counter-views');
-        if (counter && views) {
+        if (counter) {
             counter.innerHTML = "Unable to load visitor count.";
         }
     }
