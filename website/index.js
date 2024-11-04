@@ -76,7 +76,7 @@ async function updateCounter() {
         let data = await response.json();
         console.log(data);
 
-        counter.innerHTML = `Views: ${data}`;
+        counter.innerHTML = `👀 Views: ${data}`;
 
         
     } catch (error) {
